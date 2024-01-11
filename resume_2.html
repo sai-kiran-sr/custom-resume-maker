@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> MY RESUME </title>
+        <script src="https://kit.fontawesome.com/08e20f8a4f.js" crossorigin="anonymous"></script>
+        <style>
+            .box{
+                border: 2pt solid black;
+            }
+            
+            #cv-template{
+                display:none;
+            }
+            #part1{
+                background-color:cornsilk;
+            }
+
+            .background{
+                background-color:rgb(6, 24, 85);
+            }
+           
+            .myimg{
+    
+                border-radius: 50%;
+                width:200px;
+                }
+            
+        </style>
+    </head>
+    <body><section id="part1" >
+        <div class="container" id="cv-form">
+            <div class="box" style="background-color: rgb(6, 24, 85); color: white;" ><h1 class="text-center my-2" >MY RESUME</h1></div><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box" style="text-align: center;background-color: rgb(10, 39, 119); color: white;" ><h3> PERSONAL INFORMATION</h3><br></div><br>
+                   <div class="box" style="background-color: orange;" ><br>
+                   <div class="form-group" style="margin-left: 20px; margin-right: 20px;">
+                       <label for="nameField">FULL NAME</label>
+                       <input type="text" id="nameField" placeholder="FULLNAME" class="form-control"/>
+                    </div>
+                    <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="contactField">PHONE NUMBER</label>
+                        <input type="text" id="contactField" placeholder="PHONE NUMBER" class="form-control"/>
+                    </div>
+                    <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+
+                        <label for="mailidField">E-MAIL</label>
+                        <input type="email" id="mailidField" placeholder="E-MAIL" class="form-control"/>
+                    </div>
+                    <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="bdayField">BIRTHDAY</label>
+                        <input type="date" id="bdayField" placeholder="BIRTHDAY" class="form-control"/>
+                    </div>
+                    <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="addressField">LOCATION</label>
+                        <input type="text" id="addressField" placeholder="LOCATION" class="form-control"/>
+                        
+                    </div>
+
+                    <div class="form-group mt-3" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="">CHOOSE PROFILE PHOTO</label>
+                        <input id="imgField" type="file" class="form-control">
+                    </div><br></div><br>
+
+                    <div class="box" style="background-color: rgb(9, 119, 119);" >
+                     <h3 class="text-group my-3" style="text-align: center;color: black;"> IMPORTANT LINKS</h3>
+                
+                    <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="fbField">LINKEDIN</label>
+                        <input type="text" id="fbField" placeholder="LINKEDIN" class="form-control"/>
+                     </div>
+                     <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="instaField">GITHUB</label>
+                        <input type="text" id="instaField" placeholder="GITHUB" class="form-control"/>
+                     </div>
+                     <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                        <label for="LinkedField">OTHER LINK</label>
+                        <input type="text" id="LinkedField" placeholder="OTHER LINK" class="form-control"/><br>
+                     </div></div><br><br>
+
+                     <div class="box" style="background-color: rgb(233, 21, 92);" >
+                        <h3 class="text-group my-3" style="text-align: center;color: black;"> OTHER DETAILS</h3>
+                        <div class="form-group mt-2" id="sk" style="margin-left: 20px; margin-right: 20px;">
+                           <label for="">SKILLS</label>
+                           <textarea  placeholder="SKILL" class="form-control skField" rows="1"></textarea>
+                       <div class="container text-center mt-2" id="skAddButton">
+                           <button onclick="addNewskField()" class="btn btn-primary btn-sm">Add</button>
+                       </div>
+                       </div>
+                       <div class="form-group mt-2" id="la" style="margin-left: 20px; margin-right: 20px;">
+                           <label for="">LANGUAGES</label>
+                           <textarea  placeholder="LANGUAGE" class="form-control laField" rows="1"></textarea>
+                       <div class="container text-center mt-2" id="laAddButton">
+                           <button onclick="addNewlaField()" class="btn btn-primary btn-sm">Add</button>
+                       </div><br>
+                       </div>
+                
+                </div></div>
+                <div class="col-md-6">
+                    <!--second col-->
+                    <div class="box" style="text-align: center;background-color: rgb(10, 39, 119); color: white;" ><h3> PROFESSIONAL DETAILS</h3><br></div><br>
+                    <div class="box"style="background-color: rgb(236, 67, 75);" ><br>
+                    <div class="form-group mt-2" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-size: larger; font-weight: bold; " >OBJECTIVE</label>
+                        <textarea id="objectiveField" rows="4" placeholder="OBJECTIVE" class="form-control"></textarea>
+                    </div><br></div><br>
+                    <div class="box" style="background-color: rgb(35, 196, 182);" > <br><p style="text-align: center; font-weight: bold;">SSLC DETAILS </p>
+                        <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                            <label for="schoolname">SCHOOL NAME </label>
+                            <input type="text" id="schoolname" placeholder="SCHOOL NAME" class="form-control"/>
+                         </div>
+                         <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                            <label for="passout" > YEAR OF GRADUATION</label>
+                            <input type="text" id="passout" placeholder="FROM - TO" class="form-control"/>
+                         </div>
+                         <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                            <label for="percentage">PERCENTAGE </label>
+                            <input type="text" id="percentage" placeholder="PERCENTAGE" class="form-control"/><br>
+                         </div>
+                        </div><br>
+
+                        <div class="box" style="background-color: rgb(176, 224, 43);" > <br><p style="text-align: center; font-weight: bold;">PUC DETAILS </p>
+                            <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                <label for="collegename">COLLEGE NAME </label>
+                                <input type="text" id="collegename" placeholder="COLLEGE NAME" class="form-control"/>
+                             </div>
+                             <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                <label for="passout1" >  YEAR OF GRADUATION</label>
+                                <input type="text" id="passout1" placeholder="FROM - TO" class="form-control"/>
+                             </div>
+                             <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                <label for="percentage1">PERCENTAGE  </label>
+                                <input type="text" id="percentage1" placeholder="PERCENTAGE" class="form-control"/><br>
+                             </div>
+                            </div><br>
+                            <!--start-->
+                            <div class="box" style="background-color: rgb(160, 82, 212);" > <br><p style="text-align: center; font-weight: bold;">UNDER GRADUATION</p>
+                                <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                    <label for="ugname"> DEGREE </label>
+                                    <input type="text" id="ugname" placeholder="DEGREE - DEPARTMENT" class="form-control"/>
+                                 </div>
+                                
+                                
+                                <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                    <label for="ugclgname">COLLEGE NAME </label>
+                                    <input type="text" id="ugclgname" placeholder="COLLEGE NAME" class="form-control"/>
+                                 </div>
+                                 <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                    <label for="universityname">UNIVERSITY NAME</label>
+                                    <input type="text" id="universityname" placeholder="UNIVERSITY NAME" class="form-control"/>
+                                 </div>
+                                
+                                 <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                    <label for="passout2" >  YEAR OF GRADUATION</label>
+                                    <input type="text" id="passout2" placeholder="FROM - TO" class="form-control"/>
+                                 </div>
+                                 <div class="form-group mt-2" style="margin-left: 20px; margin-right: 20px;">
+                                    <label for="percentage2">PERCENTAGE  </label>
+                                    <input type="text" id="percentage2" placeholder="PERCENTAGE" class="form-control"/><br>
+                                 </div>
+                                </div>
+                                <!--end--><br>
+                                <div class="box" style="background-color: rgb(224, 101, 101);" >       
+                    <div class="form-group mt-2" id="we" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-weight: bold;">TECHNICAL SKILLS</label>
+                        <textarea  placeholder="TECHNICAL SKILLS" class="form-control weField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button><br>
+                    </div><br>
+                    </div></div><br>
+                    <div class="box"style="background-color: orange;"  >
+                    <div class="form-group mt-2" id="aq" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-weight: bold;">CERTIFICATES</label>
+                        <textarea placeholder="CERTIFICATE" class="form-control eqField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div><br>
+                    </div></div><br>
+
+                    <div class="box" style="background-color: rgb(228, 74, 215);" >
+                    <div class="form-group mt-2" id="int" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-weight: bold;">INTERNSHIP</label>
+                        <textarea placeholder="INTERNSHIP" class="form-control intField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="intAddButton">
+                        <button onclick="addNewintField()" class="btn btn-primary btn-sm">Add</button>
+                    </div><br>
+                    </div></div><br>
+
+                    <div class="box" style="background-color: rgb(204, 233, 185);" >
+                    <div class="form-group mt-2" id="pro" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-weight: bold;">PROJECTS</label>
+                        <textarea placeholder="PROJECT" class="form-control proField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="proAddButton">
+                        <button onclick="addNewproField()" class="btn btn-primary btn-sm">Add</button>
+                    </div><br>
+                    </div></div><br>
+
+                    <div class="box"  style="background-color: rgb(128, 228, 97);">
+                    <div class="form-group mt-2" id="ach" style="text-align: center; margin-left: 20px; margin-right: 20px;">
+                        <label for="" style="font-weight: bold;">ACHIEVEMENT</label>
+                        <textarea placeholder="ACHIEVEMENT" class="form-control achField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="achAddButton">
+                        <button onclick="addNewachField()" class="btn btn-primary btn-sm">Add</button>
+                    </div><br>
+                    </div></div><br>
+            </div>
+            </div>
+            <div class="container text-center mt-3"><br>
+                <button onclick="generateCV()" class="btn btn-primary btn-lg">GENERATE RESUME</button>
+            </div>
+        </div>
+    </section><br><br>
+        
+    <section id="part2">
+        <div class="container" id="cv-template">
+                <div class="row">
+                    <div class="col-md-4 text-center py-5 " style="background-color:rgba(87, 70, 167, 0.842)">
+                        <!--first column-->
+                            <img src="https://clipground.com/images/female-profile-icon-clipart-3.jpg" alt="" class="img-fluid myimg" id="imgTemplate"/>
+                            <div class="container"><br><br>
+                                <p id="nameT1" style="text-decoration: underline; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size:xx-large; color:black">Manjula Shivaraya</p>
+                                <br>
+                                <i class="fas fa-phone">     <p id="contactT" style="text-align: left; font-family: Georgia, 'Times New Roman', Times, serif; font-size:larger; color:black;">9867542398</p></i><br>
+                                
+                                <i class="fas fa-envelope-open-text"><p id="mailT" style="text-align: left; font-family:Georgia, 'Times New Roman', Times, serif; font-size:large; color:black;"> manjula@gmail.com</p></i><br>
+                                <i class="fas fa-birthday-cake"> <p id="bdayT" style="text-align: left;  font-family:Georgia, 'Times New Roman', Times, serif;font-size:large;color: black;"> 13/3/2000</p></i><br>
+                                <i class="fas fa-map-marker-alt"> <p id="addressT" style="text-align: left; font-family:Georgia, 'Times New Roman', Times, serif;  font-size:large;color: black;"> Bangalore</p></i>
+                                <br>
+                                <hr style="height: 8px; color: white;"><br>
+                             <p style="text-decoration: underline; text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; font-size:xx-large;color: black;"> IMPORTANT LINKS</p>
+                                <br>
+                                <i class="fab fa-linkedin"> <p><a id="fbT" href="#1" style=" text-align: left; font-family: Georgia, 'Times New Roman', Times, serif;color: black;">LINKEDIN</a> </p></i><br>
+                                <i class="fab fa-github"> <p><a id="instaT" href="#1" style=" text-align: left; font-family: Georgia, 'Times New Roman', Times, serif;color:black;">GITHUB </a></p></i><br>
+                                <i class="fas fa-link">  <p><a id="LinkedT" href="#1" style=" text-align: left;  font-family:Georgia, 'Times New Roman', Times, serif;color:black;">WEBSITE </a></p></i>
+                                <br><hr style="height: 8px; color: white;"><br>
+                                
+                                
+                                    <div class="card-header background " style="text-align: left; text-decoration: underline; color:black; font-family: Georgia, 'Times New Roman', Times, serif; font-size:xx-large; background-color: rgba(87, 70, 167, 0.842);">
+                                        <h3> SKILLS</h3>
+                                    </div>
+                                    <div class="card-body background " style="background-color: rgba(106, 93, 165, 0.842);">
+                                        <ul id="skT" style="text-align: left; color: black;font-family: Georgia, 'Times New Roman', Times, serif;">
+                                            <li>1 <br></li>
+                                            <li>2 <br></li>
+                                            <li>3 <br></li>
+                                        </ul>
+                                    
+                                </div><br><br><hr style="height: 8px; color: white;"><br><br>
+                        
+                                    <div class="card-header background" style="text-align: left;font-family:Georgia, 'Times New Roman', Times, serif; font-size:xx-large; text-decoration: underline; color:black; font-family: Verdana, Geneva, sans-serif; font-size:xx-large; background-color: rgba(87, 70, 167, 0.842);">
+                                        <h3 style=" font-family:Georgia, 'Times New Roman', Times, serif"> LANGUAGES</h3>
+                                    </div>
+                                    <div class="card-body background" style="background-color:  rgba(106, 93, 165, 0.842);">
+                                        <ul id="laT" style="text-align: left; color:black;font-family:Georgia, 'Times New Roman', Times, serif;">
+                                            <li> 1 <br></li>
+                                            <li>2 <br></li>
+                                            <li> 3 <br></li>
+                                        </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                           
+                                
+                        <!--second col-->
+                        <div class="col-md-8 py-5" style="background-color:rgba(155, 148, 185, 0.842);"> <h1 id="nameT2" class="text-center" style="font-weight: 980;font-family: cursive;color:black;">Manjula Shivaraya</h1>
+                        <!--objective-->
+                        <hr style="height: 8px; color: white;"><br>
+                        <div class="text-center mt-4">
+                                <h3  style="font-family: cursive; text-decoration: underline;"> OBJECTIVE</h3>
+                            <div class="card-body">
+                                <p id="objectiveT">I am a python enthusiastic</p>
+                            </div>
+                        </div>
+                        <hr style="height: 8px; color: white;"><br>
+                        <div class=" text-center mt-4">
+                                <h3 style="font-family: cursive; text-decoration: underline;"> SSLC</h3>
+                            <div class="card-body" style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black">
+                            <p id="schoolnameT"> school</p>
+                            <p id="passoutT"> passout</p>
+                            <p id="percentageT"> 100</p></div></div>
+                            <hr style="height: 8px; color: white;"><br>
+                            <div class="text-center mt-4">
+                                    <h3 style="font-family: cursive; text-decoration: underline;"> PUC</h3>
+                                <div class="card-body" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif; color: black">
+                                <p id="collegenameT"> name</p>
+                                <p id="passout1T"> passout</p>
+                                <p id="percentage1T"> 100</p></div></div>
+                                
+                                <hr style="height: 8px; color: white;"><br>
+                                <div class="text-center mt-4">
+                                        <h3 style="font-family: cursive; text-decoration: underline;"> UNDERGRADUATE</h3>
+                                    <div class="card-body" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif; color: black">
+                                    <p id="ugnameT"> name</p>
+                                    <p id="ugclgnameT"> name</p>
+                                    <p id="universitynameT"> name</p>
+                                    <p id="passout2T"> passout</p>
+                                    <p id="percentage2T">100</p>
+                                </div></div>
+                        
+                                <hr style="height: 8px; color: white;"><br>
+
+                        <!--TECHNICAL SKILLS-->
+                        <div class="text-center mt-4">
+                                <h3 style="font-family: cursive; text-decoration: underline;"> TECHNICAL SKILLS</h3>
+                            <div class="card-body" style="align-items: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black">
+                                <ul id="weT">
+                                    <li style="align-items: center;"> 1 </li>
+                                    <li> 2 </li>
+                                    <li> 3 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="height: 8px; color: white;"><br>
+                        <!--CERTIFICATES-->
+                        <div class="text-center mt-4">
+                                <h3 style="font-family: cursive;text-decoration: underline;"> CERTIFICATES</h3>
+                            <div class="card-body" style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black">
+                                <ul id="aqT">
+                                    <li> 1 </li>
+                                    <li> 2 </li>
+                                    <li> 3 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="height: 8px; color: white;"><br>
+                        <div class="text-center mt-4">
+
+                                <h3 style="font-family: cursive;text-decoration: underline;"> INTERNSHIP</h3>
+
+                            <div class="card-body text-center" style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: black">
+                                <ul id="intT">
+                                    <li> 1 </li>
+                                    <li> 2 </li>
+                                    <li> 3 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="height: 8px; color: white;"><br>
+                        <div class="text-center mt-4">
+                                <h3 style="font-family: cursive;text-decoration: underline;"> PROJECTS</h3>
+        
+                            <div class="card-body" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif; color: black">
+                                <ul id="proT">
+                                    <li> 1 </li>
+                                    <li> 2 </li>
+                                    <li> 3 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="height: 8px; color: white;"><br>
+                        <div class="text-center mt-4">
+                    
+                                <h3 style="font-family: cursive;text-decoration: underline;"> ACHIEVEMENT</h3>
+                 
+                            <div class="card-body" style="text-align: center; font-family:Georgia, 'Times New Roman', Times, serif; color: black">
+                                <ul id="achT">
+                                    <li> 1 </li>
+                                    <li> 2 </li>
+                                    <li> 3 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="container mt-3 text-center" >
+                            <button onclick="printCV()" class="btn background"style="color: white;">
+                                Print Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+    </section>
+        <p><br><br></p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="7_script2.js"></script>
+    </body>
+</html>
